@@ -18,8 +18,8 @@ class PdfUtilsService
      */
     public function __construct($config)
     {
-        $this->binary_path = $config['binary_path'];
-        $this->tmp_dir = $config['tmp_dir'];
+        $this->binary_path = $config['binary_path'] ?: '/usr/bin';
+        $this->tmp_dir = $config['tmp_dir'] ?: storage_path('tmp');
     }
 
     /**

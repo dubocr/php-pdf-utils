@@ -18,6 +18,8 @@ Install this package through [Composer](https://getcomposer.org/).
 
 Run `composer require dubocr/php-pdf-utils`
 
+Publish the config `php artisan vendor:publish --provider="Dubocr\PdfUtils\Providers\PdfUtilsServiceProvider"`
+
 If not automatically discovered, add Service Provider and Facade in your `config/app.php` file
 ```php
 'providers' => [
@@ -65,9 +67,6 @@ foreach($pdf->getPages() as $i => $page) {
 $pdf = PdfUtils::disk('remote')->loadFile($file);
 ```
 
-### Laravel package
-
-You may need to publish the config `php artisan vendor:publish`
 
 ### Windows user
 
