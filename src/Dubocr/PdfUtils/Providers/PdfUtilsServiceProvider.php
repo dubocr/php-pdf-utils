@@ -27,9 +27,10 @@ class PdfUtilsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/config/pdfutils.php' => config_path('pdfutils.php'),
-        ]);
+        $path = __DIR__.'/../../../../config/config.php';
+
+        $this->publishes([$path => config_path('pdfutils.php')], 'config');
+        $this->mergeConfigFrom($path, 'pdfutils');
     }
 
     /**
