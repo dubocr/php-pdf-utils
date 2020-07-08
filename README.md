@@ -6,7 +6,9 @@ This is a PHP wrapper for `xpdf` - `popper-utils`. See [http://doc.ubuntu-fr.org
 
 ## Requirements
 * __xpdf__ - `sudo apt-get install xpdf`. [https://www.xpdfreader.com/download.html](https://www.xpdfreader.com/download.html).
-OR
+
+or
+
 * __popper-utils__ - `sudo apt-get install popper-utils`. [http://doc.ubuntu-fr.org/poppler-utils](http://doc.ubuntu-fr.org/poppler-utils).
 
 
@@ -17,6 +19,10 @@ Install this package through [Composer](https://getcomposer.org/).
 Run `composer install dubocr/php-pdf-utils`
 
 ## Usage
+
+```php
+use PdfUtils;
+```
 
 ```php
 $pdf = PdfUtils::loadFile($file);
@@ -45,4 +51,4 @@ You may need to publish the config `php artisan vendor:publish`
 ### Windows user
 
 For user on Windows OS, download Xpdf command line tools [https://www.xpdfreader.com/download.html](https://www.xpdfreader.com/download.html)
-Set `PDFUTILS_PATH=C:\PATH_TO\xpdf-tools-win-x.xx\bin64` in your `.env` file.
+Set `PDFUTILS_PATH="C:\\PATH_TO\\xpdf-tools-win-x.xx\\bin64"` in your `.env` file.
