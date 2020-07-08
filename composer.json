@@ -33,5 +33,5 @@
                 "PdfUtils": "Dubocr\\PdfUtils\\Facades\\PdfUtils"
             }
         }
-    },
+    }
 }
