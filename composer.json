@@ -1,0 +1,37 @@
+{
+    "name": "dubocr/php-pdf-utils",
+    "description": "PHP Laravel Wrapper for PDF Poppler-utils (XPDF) tool",
+    "keywords": ["pdf","xpdf","poppler","php","pdfimages","laravel"],
+    "require": {
+        "symfony/process": "^5.1",
+        "php": "^7.3"
+    },
+    "license": "Apache 2.0",
+    "homepage": "https://github.com/dubocr/php-pdf-utils",
+    "support": {
+        "issues": "https://github.com/dubocr/php-pdf-utils/issues",
+        "source": "https://github.com/dubocr/php-pdf-utils"
+    },
+    "authors": [
+        {
+            "name": "Romain DUBOC",
+            "email": "dubocr@gmail.com",
+            "homepage": "https://romain.duboc.pro"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dubocr\\PdfUtils\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dubocr\\PdfUtils\\Providers\\PdfUtilsServiceProvider"
+            ],
+            "aliases": {
+                "PdfUtils": "Dubocr\\PdfUtils\\Facades\\PdfUtils"
+            }
+        }
+    },
+}
