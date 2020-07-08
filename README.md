@@ -18,9 +18,11 @@ Install this package through [Composer](https://getcomposer.org/).
 
 Run `composer require dubocr/php-pdf-utils`
 
-Publish the config `php artisan vendor:publish --provider="Dubocr\PdfUtils\Providers\PdfUtilsServiceProvider"`
+If necessary, publish the config `php artisan vendor:publish --provider="Dubocr\PdfUtils\Providers\PdfUtilsServiceProvider"`
 
-If not automatically discovered, add Service Provider and Facade in your `config/app.php` file
+## Laravel < 5.5
+
+In Laravel 5.4 and below, package are not auto discovered. You must add Service Provider and Facade in your `config/app.php` file
 ```php
 'providers' => [
 	...
