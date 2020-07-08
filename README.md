@@ -16,7 +16,7 @@ or
 
 Install this package through [Composer](https://getcomposer.org/).
 
-Run `composer install dubocr/php-pdf-utils`
+Run `composer require dubocr/php-pdf-utils`
 
 ## Usage
 
