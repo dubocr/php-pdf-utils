@@ -18,6 +18,27 @@ Install this package through [Composer](https://getcomposer.org/).
 
 Run `composer require dubocr/php-pdf-utils`
 
+If not automatically discovered, add Service Provider and Facade in your `config/app.php` file
+```php
+'providers' => [
+	...
+	
+	/*
+	 * Package Service Providers...
+	 */
+	Dubocr\PdfUtils\Providers\PdfUtilsServiceProvider::class,
+	
+	...
+]
+
+'aliases' => [
+	...
+	
+	'PdfUtils' => Dubocr\PdfUtils\Facades\PdfUtils::class,
+]
+```
+
+
 ## Usage
 
 ```php
