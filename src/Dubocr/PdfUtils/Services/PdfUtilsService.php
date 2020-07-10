@@ -60,9 +60,9 @@ class PdfUtilsService
                     case 'Form': $pdf->form = $value; break;
                     case 'Pages': $pdf->pages = intVal($value); break;
                     case 'Encrypted': $pdf->encrypted = $value !== 'no'; break;
-                    case 'File size': $pdf->encrypted = intVal(str_replace(' bytes', '', $value)); break;
+                    case 'File size': $pdf->size = intVal(str_replace(' bytes', '', $value)); break;
                     case 'Optimized': $pdf->optimized = $value !== 'no'; break;
-                    case 'PDF version': $pdf->version = $value !== 'no'; break;
+                    case 'PDF version': $pdf->version = $value; break;
                 }
             }
         }

@@ -9,12 +9,12 @@ class Pdf
     private $_pages = null;
 
     public $creator;
-    public $tagged;
+    public $tagged = false;
     public $form;
-    public $pages;
-    public $encrypted;
-    public $size;
-    public $optimized;
+    public $pages = 0;
+    public $encrypted = false;
+    public $size = 0;
+    public $optimized = false;
     public $version;
 
     /**
