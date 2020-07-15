@@ -1,6 +1,6 @@
 <?php
 
-namespace Webstack\QPDF;
+namespace Dubocr\PdfUtils\Wrappers;
 
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
