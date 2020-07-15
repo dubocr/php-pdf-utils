@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9605c76c67fba2cb7fcdf21c654c9ec",
+    "content-hash": "be4c99a372262f2276292242dcdbcec9",
     "packages": [
         {
             "name": "symfony/polyfill-php80",
@@ -128,16 +128,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dubocr/qpdf.git",
-                "reference": "6930a06582a44943eb99ce4bbc2b9cd559b60232"
+                "reference": "5b53e5f1aa7970f15e4cb812fce388bf4af84990"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dubocr/qpdf/zipball/6930a06582a44943eb99ce4bbc2b9cd559b60232",
-                "reference": "6930a06582a44943eb99ce4bbc2b9cd559b60232",
+                "url": "https://api.github.com/repos/dubocr/qpdf/zipball/5b53e5f1aa7970f15e4cb812fce388bf4af84990",
+                "reference": "5b53e5f1aa7970f15e4cb812fce388bf4af84990",
                 "shasum": ""
             },
             "require": {
-                "symfony/process": "^5.1"
+                "symfony/process": "^5.0"
             },
             "type": "library",
             "autoload": {
@@ -158,7 +158,7 @@
             "support": {
                 "source": "https://github.com/dubocr/qpdf/tree/master"
             },
-            "time": "2020-07-15T10:45:58+00:00"
+            "time": "2020-07-15T11:03:31+00:00"
         }
     ],
     "packages-dev": [],

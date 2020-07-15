@@ -3,7 +3,7 @@
     "description": "PHP Laravel Wrapper for PDF Poppler-utils (XPDF) tool",
     "keywords": ["pdf","xpdf","poppler","php","pdfimages","laravel"],
     "require": {
-        "symfony/process": "^5.1",
+        "symfony/process": "^5.0",
         "php": "^7.3",
         "webstack/qpdf": "dev-master"
     },
