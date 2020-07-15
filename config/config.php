@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'binary_path' => env('PDFUTILS_PATH', '/usr/bin'),
+    'binary_path' => env('POPPLER_PATH', '/usr/bin'),
 
     /*
     |--------------------------------------------------------------------------

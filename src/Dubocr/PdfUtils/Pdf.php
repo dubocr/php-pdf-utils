@@ -28,10 +28,6 @@ class Pdf
         $this->service = $service;
     }
 
-    public function exportImages($firstPage = null, $lastPage = null) {
-        return $this->service->exportImages($this->path, $firstPage, $lastPage);
-    }
-
     public function getPages() {
         if(!$this->_pages && $this->pages > 0) {
             $this->_pages = [];
@@ -40,5 +36,13 @@ class Pdf
             }
         }
         return $this->_pages;
+    }
+
+    public function exportImages($firstPage = null, $lastPage = null) {
+        return $this->service->exportImages($this->path, $firstPage, $lastPage);
+    }
+
+    public function exportPages($file, $pages = null) {
+        return $this->service->exportPages($this->path, $file, $pages);
     }
 }

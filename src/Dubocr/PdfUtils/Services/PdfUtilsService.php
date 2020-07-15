@@ -5,7 +5,7 @@ namespace Dubocr\PdfUtils\Services;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Storage;
-use Dubocr\PdfUtils\Pdf;
+use Webstack\QPDF\QPDF;
 
 class PdfUtilsService
 {
@@ -109,5 +109,17 @@ class PdfUtilsService
 
         $files = glob($this->tmp_dir . '/' . $prefix . '*');
         return $files;
+    }
+
+    /**
+     * Export PDF pages.
+     *
+     * @return void
+     */
+    public function exportPages($source, $destination, $pages = null)
+    {
+        $src_path = $this->disk ? Storage::disk($this->disk)->path($source) : Storage::path($source);
+        $dst_path = $this->disk ? Storage::disk($this->disk)->path($destination) : Storage::path($destination);
+        return (new QPDF)->source($src_path)->addPages('.', $pages)->write($dst_path);
     }
 }

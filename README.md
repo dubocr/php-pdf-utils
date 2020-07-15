@@ -5,11 +5,8 @@ This is a PHP wrapper for `xpdf` - `popper-utils`. See [http://doc.ubuntu-fr.org
 
 
 ## Requirements
-* __xpdf__ - `sudo apt-get install xpdf`. [https://www.xpdfreader.com/download.html](https://www.xpdfreader.com/download.html).
-
-or
-
 * __popper-utils__ - `sudo apt-get install popper-utils`. [http://doc.ubuntu-fr.org/poppler-utils](http://doc.ubuntu-fr.org/poppler-utils).
+* __qpdf__ - `sudo apt-get install qpdf`. [http://qpdf.sourceforge.net/files/qpdf-manual.html](http://qpdf.sourceforge.net/files/qpdf-manual.html).
 
 
 ## Installation
@@ -26,18 +23,18 @@ In Laravel 5.4 and below, package are not auto discovered. You must add Service 
 ```php
 'providers' => [
 	...
-	
+
 	/*
 	 * Package Service Providers...
 	 */
 	Dubocr\PdfUtils\Providers\PdfUtilsServiceProvider::class,
-	
+
 	...
 ]
 
 'aliases' => [
 	...
-	
+
 	'PdfUtils' => Dubocr\PdfUtils\Facades\PdfUtils::class,
 ]
 ```
@@ -73,4 +70,4 @@ $pdf = PdfUtils::disk('remote')->loadFile($file);
 ### Windows user
 
 For user on Windows OS, download Xpdf command line tools [https://www.xpdfreader.com/download.html](https://www.xpdfreader.com/download.html)
-Set `PDFUTILS_PATH="C:\\PATH_TO\\xpdf-tools-win-x.xx\\bin64"` in your `.env` file.
+Set `POPPLER_PATH="C:\\PATH_TO\\xpdf-tools-win-x.xx\\bin64"` in your `.env` file.

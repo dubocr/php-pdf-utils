@@ -20,4 +20,8 @@ class PdfPage
     public function exportImages() {
         return $this->pdf->exportImages($this->page, $this->page);
     }
+
+    public function exportPage($file) {
+        return $this->service->exportPages($this->path, $file, $this->page);
+    }
 }
