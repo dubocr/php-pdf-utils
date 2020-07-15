@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be4c99a372262f2276292242dcdbcec9",
+    "content-hash": "aaee58f01a788f40331a3e694e15cb19",
     "packages": [
         {
             "name": "symfony/polyfill-php80",
@@ -121,52 +121,12 @@
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
             "time": "2020-05-30T20:35:19+00:00"
-        },
-        {
-            "name": "webstack/qpdf",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dubocr/qpdf.git",
-                "reference": "5b53e5f1aa7970f15e4cb812fce388bf4af84990"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dubocr/qpdf/zipball/5b53e5f1aa7970f15e4cb812fce388bf4af84990",
-                "reference": "5b53e5f1aa7970f15e4cb812fce388bf4af84990",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/process": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Webstack\\QPDF\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Webstack B.V.",
-                    "email": "info@webstack.nl"
-                }
-            ],
-            "description": "QPDF PHP",
-            "support": {
-                "source": "https://github.com/dubocr/qpdf/tree/master"
-            },
-            "time": "2020-07-15T11:03:31+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "webstack/qpdf": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
