@@ -75,7 +75,7 @@ class PdfUtilsService
      *
      * @return void
      */
-    public function exportImages($file, $firstPage = null, $lastPage = null)
+    public function exportImages($file, $firstPage = null, $lastPage = null, $ext = null)
     {
         $path = $this->disk ? Storage::disk($this->disk)->path($file) : Storage::path($file);
 
@@ -101,6 +101,9 @@ class PdfUtilsService
         }
         $args[] = $path; // File path
         $args[] = $prefix; // Image prefix
+        if($ext) {
+            $args[] = '-' . $ext; // Image ext
+        }
 
         $process = new Process($args, $this->tmp_dir);
         $process->run();

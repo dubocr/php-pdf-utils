@@ -17,8 +17,8 @@ class PdfPage
         $this->page = $page;
     }
 
-    public function exportImages() {
-        return $this->pdf->exportImages($this->page, $this->page);
+    public function exportImages($ext = null) {
+        return $this->pdf->exportImages($this->page, $this->page, $ext);
     }
 
     public function exportPage($file) {

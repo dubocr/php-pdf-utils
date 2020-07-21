@@ -38,8 +38,8 @@ class Pdf
         return $this->_pages;
     }
 
-    public function exportImages($firstPage = null, $lastPage = null) {
-        return $this->service->exportImages($this->path, $firstPage, $lastPage);
+    public function exportImages($firstPage = null, $lastPage = null, $ext = null) {
+        return $this->service->exportImages($this->path, $firstPage, $lastPage, $ext);
     }
 
     public function exportPages($file, $pages = null) {
