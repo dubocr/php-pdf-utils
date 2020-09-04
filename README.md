@@ -61,11 +61,6 @@ foreach($pdf->getPages() as $i => $page) {
 }
 ```
 
-## For specific laravel storage disk...
-```php
-$pdf = PdfUtils::disk('remote')->loadFile($file);
-```
-
 
 ### Windows user
 

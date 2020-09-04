@@ -4,14 +4,11 @@ namespace Dubocr\PdfUtils\Services;
 
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
-use Storage;
 use Dubocr\PdfUtils\Pdf;
 use Dubocr\PdfUtils\Wrappers\QPDF;
 
 class PdfUtilsService
 {
-    private $disk = null;
-
     /**
      * Create a new service instance.
      *
@@ -24,26 +21,13 @@ class PdfUtilsService
     }
 
     /**
-     * Set storage disk.
-     *
-     * @return void
-     */
-    public function disk($disk)
-    {
-        $this->disk = $disk;
-        return $this;
-    }
-
-    /**
      * Load PDF file info.
      *
      * @return void
      */
     public function loadFile($file)
     {
-        $path = $this->disk ? Storage::disk($this->disk)->path($file) : Storage::path($file);
-
-        $process = new Process([$this->binary_path . '/pdfinfo', $path]);
+        $process = new Process([$this->binary_path . '/pdfinfo', $file]);
         $process->run();
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
@@ -77,9 +61,6 @@ class PdfUtilsService
      */
     public function exportImages($file, $firstPage = null, $lastPage = null, $ext = null)
     {
-        $path = $this->disk ? Storage::disk($this->disk)->path($file) : Storage::path($file);
-
-
         $prefix = 'pdfutils_' . uniqid();
 
         if(!is_dir($this->tmp_dir)) {
@@ -99,7 +80,7 @@ class PdfUtilsService
             $args[] = '-l';
             $args[] = $lastPage;
         }
-        $args[] = $path; // File path
+        $args[] = $file; // File path
         $args[] = $prefix; // Image prefix
         if($ext) {
             $args[] = '-' . $ext; // Image ext
@@ -122,8 +103,6 @@ class PdfUtilsService
      */
     public function exportPages($source, $destination, $pages = null)
     {
-        $src_path = $this->disk ? Storage::disk($this->disk)->path($source) : Storage::path($source);
-        $dst_path = $this->disk ? Storage::disk($this->disk)->path($destination) : Storage::path($destination);
-        return (new QPDF)->source($src_path)->addPages('.', $pages)->write($dst_path);
+        return (new QPDF)->source($source)->addPages('.', $pages)->write($destination);
     }
 }
