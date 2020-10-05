@@ -106,6 +106,6 @@ class QPDF
      */
     private function buildCommand(?string $path = null): string
     {
-        return 'qpdf ' . ($this->source ?: '--empty') . ' ' . ($this->pages ? '--pages ' . implode(' ', $this->pages) . ' --' : '') . ' ' . ($path ?: '-');
+        return 'qpdf ' . ("'".$this->source."'" ?: '--empty') . ' ' . ($this->pages ? '--pages ' . implode(' ', $this->pages) . ' --' : '') . ' ' . ($path ?: '-');
     }
 }
