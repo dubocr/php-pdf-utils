@@ -5,7 +5,7 @@ namespace Dubocr\PdfUtils\Services;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Dubocr\PdfUtils\Pdf;
-use Dubocr\PdfUtils\Wrappers\QPDF;
+use Dubocr\PdfUtils\Wrapper\QPDF;
 
 class PdfUtilsService
 {

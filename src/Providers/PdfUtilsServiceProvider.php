@@ -27,7 +27,7 @@ class PdfUtilsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $path = __DIR__.'/../../../../config/config.php';
+        $path = __DIR__.'/../../config/config.php';
 
         $this->publishes([$path => config_path('pdfutils.php')], 'config');
         $this->mergeConfigFrom($path, 'pdfutils');

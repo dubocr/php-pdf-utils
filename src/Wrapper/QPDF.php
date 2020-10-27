@@ -1,6 +1,6 @@
 <?php
 
-namespace Dubocr\PdfUtils\Wrappers;
+namespace Dubocr\PdfUtils\Wrapper;
 
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
